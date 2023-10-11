@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif, arial;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(220deg, #00fa43, #f7f7f7, rgba(255, 119, 7, 0.89));
+  padding: 10px;
+}
+
+.todo-app{
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.todo-app h2{
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo-app h2 img{
+  width: 40px;
+  margin-left: 10px;
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(220deg, #dbf4e2, #f7f7f7, rgba(255, 243, 234, 0.89));
+  border-radius: 30px;
+  padding-left: 20px ;
+  margin-bottom: 25px;
+}
+input{
+  flex: 1;
+  border:none;
+  outline: none;
+  background: transparent;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(86, 86, 86);
+}
+ button{
+  border:none;
+  outline: none;
+  padding: 15px 50px;
+  color: rgb(44, 44, 44);
+  background-color: rgba(149, 149, 149, 0.314);
+  border-radius: 10px 50px 50px 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s;
+ }
+ button:hover{
+  opacity: 0.6;
+  background-color: rgb(88, 88, 88);
+  color:rgb(229, 228, 228);
+ }
+ button:active{
+  opacity: 0.4;
+ }
+
+ ul li{
+  list-style: none;
+  font-size : 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+ }
+ ul li::before{
+  content: '';
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-image: url(img/circle-regular.svg) ;
+  background-size: cover;
+  background-position: center;
+  top:9px;
+  left : 8px;
+  border-color: orange;
+  background: linear-gradient(220deg, #7f7f7f, #f7f7f7, rgba(152, 152, 152, 0.89));
+  
+ }
+
+ ul li.checked {
+  color: #79797996;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: "";
+  background-image: url(img/circle-check-regular.svg);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  animation: bounce 2s infinite;
+  background-color: #79797996; /* Match tick color with the text color */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
