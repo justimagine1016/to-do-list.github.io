@@ -36,12 +36,12 @@
   justify-content: space-between;
   background: linear-gradient(220deg, #dbf4e2, #f7f7f7, rgba(255, 243, 234, 0.89));
   border-radius: 30px;
-  padding-left: 20px ;
   margin-bottom: 25px;
 }
 input{
   flex: 1;
   border:none;
+  text-align: center;
   outline: none;
   background: transparent;
   padding: 15px;
@@ -146,4 +146,15 @@ ul li span:hover{
   border-radius: 15px;
   font-size: 10px;
   background: linear-gradient(220deg, #ffffff10, #ff7373ab, rgba(255, 255, 255, 0.216));
+}
+@media screen and (max-width: 500px) {
+  .row {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  button {
+    margin-top: 15px; /* Add some space between input and button */
+    border-radius: 50px;
+    width: 100%;
+  }
 }
